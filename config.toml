@@ -78,7 +78,7 @@ disableHugoGeneratorInject = false
     # path = "/img/your-example-logo.svg"
     # alt = "Your example logo alt text"
 
-  # And you can even create generic menu
+# Nav bar items
   [[menu.main]]
     identifier = "posts"
     name       = "Posts"
