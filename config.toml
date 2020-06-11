@@ -1,0 +1,96 @@
+baseurl      = "localhost"
+title        = "Harrison Cook"
+languageCode = "en-nz"
+theme        = "hello-friend-ng"
+paginate     = 10
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+
+[author]
+  name = "Harrison Cook"
+
+[params]
+  dateform        = "2 Jan, 2006"
+  dateformShort   = "2 Jan"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  # Subtitle for home
+  homeSubtitle = "A dope site"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Metadata mostly used in document's head
+  description = "My site"
+  keywords = "homepage, blog"
+  images = [""]
+
+  # Default theme "light" or "dark"
+  defaultTheme = "dark"
+  themeColor = "#252627"
+
+  customCSS = ["css/main.css"]
+  customJS  = []
+
+  # Social icons
+#   [[params.social]]
+#     name = "email"
+#     url  = "mailto:harrisoncook4@gmail.com"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/Fellsmarch"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/harrison-cook-33766653/"
+
+
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+[languages]
+  [languages.en]
+    title = "Harrison Cook"
+    # subtitle = ""
+    keywords = ""
+    # copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "C:\\Users\\Harrison>"
+      logoHomeLink = "/"
+    #   logoCursorDisabled = false
+      logoCursorColor = "#8f34eb"
+    #   logoCursorAnimate  = "2s"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "/posts"
+
+  [[menu.main]]
+    identifier = "about"
+    name       = "Who?"
+    url        = "/about"
+
+  [[menu.main]]
+    identifier = "resume"
+    name       = "Resume"
+    url        = "/resume"
+
