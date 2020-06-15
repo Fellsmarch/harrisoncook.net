@@ -1,0 +1,9 @@
+<span id="age">        
+    <script type="text/javascript">
+        let birthday = new Date(1997, 10, 19);
+        let ageDifMs = Date.now() - birthday;
+        let ageDate = new Date(ageDifMs);
+        let age = Math.abs(ageDate.getUTCFullYear() - 1970);
+        document.querySelector("#age").innerHTML = age;
+    </script>
+</span>

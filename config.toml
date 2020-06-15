@@ -23,13 +23,13 @@ disableHugoGeneratorInject = false
   dateformNumTime = "2006-01-02 15:04 -0700"
 
   # Subtitle for home
-  homeSubtitle = "A dope site"
+  homeSubtitle = "Security Engineer | Football Referee"
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
 
   # Metadata mostly used in document's head
-  description = "My site"
+  description = "Harrison Cook's Personal Website"
   keywords = "homepage, blog"
   images = [""]
 
@@ -37,13 +37,13 @@ disableHugoGeneratorInject = false
   defaultTheme = "dark"
   themeColor = "#252627"
 
-  customCSS = ["css/main.css"]
+  customCSS = ["css/main2.css"]
   customJS  = []
 
   # Social icons
-#   [[params.social]]
-#     name = "email"
-#     url  = "mailto:harrisoncook4@gmail.com"
+  [[params.social]]
+    name = "email"
+    url  = "mailto:harrisoncook4@gmail.com"
 
   [[params.social]]
     name = "github"
@@ -89,8 +89,8 @@ disableHugoGeneratorInject = false
     name       = "Who?"
     url        = "/about"
 
-  [[menu.main]]
-    identifier = "resume"
-    name       = "Resume"
-    url        = "/resume"
+  # [[menu.main]]
+  #   identifier = "resume"
+  #   name       = "Resume"
+  #   url        = "/resume"
 

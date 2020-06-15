@@ -21,3 +21,13 @@
     visibility: hidden;
     margin: 0px;
 }
+
+#about-me-title {
+    text-align: center;
+    display: block;
+}
+
+figure {
+    margin-left: auto;
+    margin-right: auto;
+}
