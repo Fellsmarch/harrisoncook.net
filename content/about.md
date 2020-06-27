@@ -9,4 +9,6 @@ aliases: ["about-us","about","contact", "who"]
 
 {{< figure src="/img/avatar.png" height="300" width="300" >}}
 {{< custom-title id="about-me-title" title="Harrison Cook" >}}
-{{< years-since year=1997 month=10 day=19 >}} year-old New Zealander working as a Graduate Security Engineer at Xero in Wellington, New Zealand.
+I am a {{< years-since year=1997 month=10 day=19 >}} year-old New Zealander working as a Graduate Security Engineer at Xero in Wellington, New Zealand. I studied Computer Science at the [University of Canterbury](https://www.canterbury.ac.nz/).
+
+I am an avid football player and [referee]({{< ref "referee.md" >}}) 
