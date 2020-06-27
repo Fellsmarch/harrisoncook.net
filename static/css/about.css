@@ -14,3 +14,11 @@ img {
     max-height: 100vw;
     margin: auto;
 }
+
+a {
+    text-decoration-line: none;
+}
+
+a:hover, a:active, a:focus {
+    color: #cac9d4;
+}
