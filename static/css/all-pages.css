@@ -22,12 +22,21 @@
     margin: 0px;
 }
 
-#about-me-title {
-    text-align: center;
-    display: block;
+pre code {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    line-height: 1em; /* a */
+    max-height: 2em; /* a x number of line to show (ex : 2 line)  */
 }
 
-figure {
-    margin-left: auto;
-    margin-right: auto;
-}
+/* @media screen and (min-width: 403px) {
+    pre code {
+      font-size: calc(5px + 6 * ((100vw - 403px) / 856));
+    }
+  }
+@media screen and (min-width: 1000px) {
+    pre code {
+      font-size: inherit;
+    }
+  } */

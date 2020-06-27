@@ -13,6 +13,9 @@ disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
 
+# [markup.goldmark.renderer]
+  # unsafe= true
+
 [author]
   name = "Harrison Cook"
 
@@ -37,13 +40,13 @@ disableHugoGeneratorInject = false
   defaultTheme = "dark"
   themeColor = "#252627"
 
-  customCSS = ["css/main2.css"]
+  customCSS = ["css/all-pages.css"]
   customJS  = []
 
   # Social icons
   [[params.social]]
     name = "email"
-    url  = "mailto:harrisoncook4@gmail.com"
+    url  = "mailto:harrisoncook4+website@gmail.com"
 
   [[params.social]]
     name = "github"
@@ -52,7 +55,6 @@ disableHugoGeneratorInject = false
   [[params.social]]
     name = "linkedin"
     url  = "https://www.linkedin.com/in/harrison-cook-33766653/"
-
 
 [taxonomies]
     category = "blog"
@@ -93,4 +95,9 @@ disableHugoGeneratorInject = false
   #   identifier = "resume"
   #   name       = "Resume"
   #   url        = "/resume"
+
+  [[menu.main]]
+    identifier = "referee"
+    name       = "Referee"
+    url        = "/referee"
 

@@ -1,0 +1,16 @@
+#about-me-title {
+    text-align: center;
+    display: block;
+}
+
+figure {
+    margin: auto;
+    height: 100%;
+    display: grid;
+}
+
+img {
+    max-width: 100vw;
+    max-height: 100vw;
+    margin: auto;
+}
