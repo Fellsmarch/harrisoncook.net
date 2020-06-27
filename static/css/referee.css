@@ -1,0 +1,5 @@
+.post-cover {
+    object-fit: cover;
+    height: 300px;
+    object-position: 0% 20%;
+}

@@ -64,7 +64,7 @@ Full Proxy changing destination example
 ```
 
 ### Reverse and Forward Proxies
-While both reverse and forward of proxies technically don't have to be full proxies, in most practical applications they will be, so I will discuss reverse and forward proxies as if they are always full proxies. Also all proxy servers are either reverse or forward proxies.
+While both reverse and forward of proxies technically don't have to be full proxies, in most practical applications they will be, so I will discuss reverse and forward proxies as if they are always full proxies. All proxy servers are either reverse or forward proxies.
 
 #### Reverse Proxy
 A reverse proxy is simply a proxy that sits 'in front of' (often multiple) servers rather than sitting in front of a client. To be clearer, the client's connection goes to the internet, then the reverse proxy, then the server. In most cases, the client treats the reverse proxy as the server (it doesn't know the proxy is a proxy and thinks it is a normal server), and doesn't know about what is behind the reverse proxy. 
