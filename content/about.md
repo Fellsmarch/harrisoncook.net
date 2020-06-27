@@ -3,7 +3,6 @@ pageTitle: "Who Am I?"
 #title: "Who Am I?"
 date: "2020-06-11"
 aliases: ["about-us","about","contact", "who"]
-#cover: "img/avatar.png"
 ---
 {{< css url="css/about.css" >}}
 
