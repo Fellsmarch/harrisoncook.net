@@ -1,42 +1,35 @@
 .logo__cursor {
-    display:inline-block;
-    width: 10px;
-    height: 0.2rem;
-    background: #fe5186;
-    margin-left: 5px;
-    margin-top: 0.8rem;
-    border-radius: 1px;
-    animation: cursor 1s infinite
+  display:inline-block;
+  width: 10px;
+  height: 0.2rem;
+  background: #fe5186;
+  margin-left: 5px;
+  margin-top: 0.8rem;
+  border-radius: 1px;
+  animation: cursor 1s infinite
 }
 
 @keyframes cursor{
-    0%      { opacity:0 }
-    0.01%   { opacity:1 }
-    50%     { opacity:1 }
-    50.01%  { opacity:0 }
-    100%    { opacity:0 }
+  0%      { opacity:0 }
+  0.01%   { opacity:1 }
+  50%     { opacity:1 }
+  50.01%  { opacity:0 }
+  100%    { opacity:0 }
 }
 
 .logo__mark {
-    visibility: hidden;
-    margin: 0px;
+  visibility: hidden;
+  margin: 0px;
 }
 
 pre code {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    line-height: 1em; /* a */
-    max-height: 2em; /* a x number of line to show (ex : 2 line)  */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  line-height: 1em; /* a */
+  max-height: 2em; /* a x number of line to show (ex : 2 line)  */
 }
 
-/* @media screen and (min-width: 403px) {
-    pre code {
-      font-size: calc(5px + 6 * ((100vw - 403px) / 856));
-    }
-  }
-@media screen and (min-width: 1000px) {
-    pre code {
-      font-size: inherit;
-    }
-  } */
+.banner-404 h1 {
+  margin: 0;
+}
