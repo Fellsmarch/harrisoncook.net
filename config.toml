@@ -1,4 +1,4 @@
-baseurl      = "http://www.harrisoncook.net"
+baseurl      = "https://www.harrisoncook.net"
 title        = "Harrison Cook"
 languageCode = "en-nz"
 theme        = "hello-friend-ng"
