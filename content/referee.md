@@ -10,7 +10,6 @@ cover: "img/referee-bg.jpg"
 {{< custom-title id="referee-title" title="Refereeing" >}}
 
 ## Personal Data
-<!-- - [All time stats]({{< ref "refereeing/stats" >}}) -->
 - [List of games I've refereed (not mobile friendly)]({{< ref "refereeing/games" >}})
 
 ## Resources
