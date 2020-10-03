@@ -9,6 +9,10 @@ cover: "img/referee-bg.jpg"
 
 {{< custom-title id="referee-title" title="Refereeing" >}}
 
+## Personal Data
+<!-- - [All time stats]({{< ref "refereeing/stats" >}}) -->
+- [List of games I've refereed (not mobile friendly)]({{< ref "refereeing/games" >}})
+
 ## Resources
 - [areferee.com](http://areferee.com/) - Great site for Laws of the Game tests
 - [Dutch Referee Blog](https://www.dutchreferee.com/) - Various refereeing resources (tips, interviews, quizzes and more) by Jan ter Harmsel 
