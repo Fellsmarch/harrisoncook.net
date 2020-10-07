@@ -4,7 +4,6 @@ tr.header {
     border-bottom: 2px solid #444040;
 }
 
-
 .dark-theme tr.header  {
     border-bottom: 2px solid #a9a9b3;
 }
@@ -38,11 +37,6 @@ tbody>:nth-child(n+2):nth-child(odd) {
 table, tr, td {
     border-collapse: collapse;
 }
-
-/* .post-title {
-    text-align: center;
-    display: block;
-} */
 
 .post {
     max-width: 80%;

@@ -10,7 +10,8 @@ cover: "img/referee-bg.jpg"
 {{< custom-title id="referee-title" title="Refereeing" >}}
 
 ## Personal Data
-- [List of games I've refereed (not mobile friendly)]({{< ref "refereeing/games" >}})
+- [Statistics]({{< ref "refereeing/stats" >}})
+- [Games]({{< ref "refereeing/games" >}}) (not mobile friendly)
 
 ## Resources
 - [areferee.com](http://areferee.com/) - Great site for Laws of the Game tests

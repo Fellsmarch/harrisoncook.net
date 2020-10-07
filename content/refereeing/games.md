@@ -1,6 +1,6 @@
 ---
-title: "List of Games Refereed"
-pageTitle: "List of Games Refereed"
+title: "Refereed Games"
+pageTitle: "Refereed Games"
 linktitle: "refereeGames"
 aliases: []
 ---
