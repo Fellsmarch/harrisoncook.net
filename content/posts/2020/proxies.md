@@ -42,7 +42,7 @@ Basic Full Proxy example
 
 +----------+                +--------------+                +----------+
 |          |  Connection 1  |              |  Connection 2  |          |
-|  Client  | <------------> |  Half Proxy  | <------------> |  Server  |
+|  Client  | <------------> |  Full Proxy  | <------------> |  Server  |
 |          |                |              |                |          |
 +----------+                +--------------+                +----------+
 ```
@@ -58,7 +58,7 @@ Full Proxy changing destination example
                                                   |
 +----------+                +--------------+      |         +-------------+
 |          |  Connection 1  |              |      |         |  Original   |
-|  Client  | <------------> |  Half Proxy  | <----+         | Destination |
+|  Client  | <------------> |  Full Proxy  | <----+         | Destination |
 |          |                |              |                |             |
 +----------+                +--------------+                +-------------+
 ```
