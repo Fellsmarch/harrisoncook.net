@@ -1,0 +1,114 @@
+<div id="statsDiv">
+    <!-- <button class="btn btn-primary btn__first" data-toggle="collapse" data-target=".collapse.first"
+        data-text="Collapse">
+        Toggle First
+    </button>
+    <button class="btn btn-primary btn__first" data-toggle="collapse" data-target=".collapse.second"
+        data-text="Collapse">
+        Toggle Second
+    </button>
+    <button class="btn btn-primary btn__first" data-toggle="collapse" data-target=".collapse" data-text="Collapse">
+        Toggle All
+    </button> -->
+
+    <div class="block collapse first">
+        <div class="block__content">
+            I'm the first content!
+        </div>
+    </div>
+    <div class="block collapse second">
+        <div class="block__content">
+            I'm the second content!
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    function createStats(json) {
+        let finalHtml = `${createButtons(json)}${createSectionContents(json)}`
+
+        document.getElementById("statsDiv").innerHTML = finalHtml
+    }
+
+    function createSectionContents(json) {
+        let html = ""
+        let count = 0
+        json.forEach(element => {
+            html += `<div class="block collapse block${count++}"><div class="block__content">${JSON.stringify(element)}</div></div>`
+        })
+        return html
+    }
+
+    function createButtons(json) {
+        let html = ""
+        let count = 0
+        json.forEach(element => {
+            html += createButton(element["Time Period"], count++, false)
+        });
+
+        // html += createButton("", "", true)
+        return html
+    }
+
+    function createButton(timePeriod, count, final) {
+        if (!final) {
+            return `<button class="btn btn-primary btn__first" data-toggle="collapse" data-target=".collapse.block${count++}" data-text="Collapse">Toggle ${timePeriod}</button>`
+        } else {
+            return `<button class="btn btn-primary btn__first" data-toggle="collapse" data-target=".collapse" data-text="Collapse">Toggle All Sections</button>`
+        }
+    }
+
+    function loadJSON(callback) {
+        let xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', {{ "json/refereeStats.json" | relURL }}, true);
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == "200") {
+                // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                callback(xobj.responseText);
+            }
+        };
+        xobj.send(null);  
+    }
+
+    function main() {
+        loadJSON(function (response) {
+            // Parse JSON string into object
+            const json = JSON.parse(response);
+            createStats(json)
+            collapseFunctionality()
+        });
+    }
+
+    main()
+
+    // Need this in a function so it can be called after json data is successfully retrieved
+    function collapseFunctionality() {
+        // Handler that uses various data-* attributes to trigger
+        // specific actions, mimicing bootstraps attributes
+        const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
+
+        window.addEventListener('click', (event) => {
+            const element = event.target;
+            if (triggers.includes(element)) {
+                const selector = element.getAttribute('data-target');
+                collapse(selector, 'toggle');
+            }
+        }, false);
+
+
+        const fnmap = {
+            'toggle': 'toggle',
+            'show': 'add',
+            'hide': 'remove'
+        };
+
+        const collapse = (selector, cmd) => {
+            const targets = Array.from(document.querySelectorAll(selector));
+            targets.forEach(target => {
+                target.classList[fnmap[cmd]]('show');
+            });
+        }
+    }
+
+</script>
