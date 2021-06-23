@@ -37,6 +37,7 @@ disableHugoGeneratorInject = false
   images = [""]
 
   # Default theme "light" or "dark"
+  enableThemeToggle = true
   defaultTheme = "dark"
   themeColor = "#252627"
 
