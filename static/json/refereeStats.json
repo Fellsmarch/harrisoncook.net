@@ -1,1 +1,26 @@
-[{"Time Period": "All time", "Total # of games": "151", "Penalties/Game": "0.33", "Yellow Cards/Game": "1.83", "Temporary Dismissals/Game": "0.37", "Red Cards/Game": "0.04", "Penalties/Middle": "0.21", "Yellow Cards/Middle": "1.19", "Temporary Dismissals/Middle": "0.33", "Red Cards/Middle": "0.01"}, {"Time Period": "2020", "Total # of games": "1", "Penalties/Game": "1", "Yellow Cards/Game": "2", "Temporary Dismissals/Game": "3", "Red Cards/Game": "4", "Penalties/Middle": "5", "Yellow Cards/Middle": "6", "Temporary Dismissals/Middle": "7", "Red Cards/Middle": "8"}]
+[
+    {
+        "Time Period": "All time",
+        "Total # of games": "151",
+        "Penalties/Game": "0.33",
+        "Yellow Cards/Game": "1.83",
+        "Temporary Dismissals/Game": "0.37",
+        "Red Cards/Game": "0.04",
+        "Penalties/Middle": "0.21",
+        "Yellow Cards/Middle": "1.19",
+        "Temporary Dismissals/Middle": "0.33",
+        "Red Cards/Middle": "0.01"
+    },
+    {
+        "Time Period": "2020",
+        "Total # of games": "1",
+        "Penalties/Game": "1",
+        "Yellow Cards/Game": "2",
+        "Temporary Dismissals/Game": "3",
+        "Red Cards/Game": "4",
+        "Penalties/Middle": "5",
+        "Yellow Cards/Middle": "6",
+        "Temporary Dismissals/Middle": "7",
+        "Red Cards/Middle": "8"
+    }
+]

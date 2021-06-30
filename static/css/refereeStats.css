@@ -1,26 +1,24 @@
-*, ::after, ::before {
-    box-sizing: border-box;
-  }
+#newStatsDiv {
+  background-color: #393a3d;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 1rem;
+}
 
-.collapse {
-    display: block;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
-  }
+.cell {
+  place-self: center;
+  margin: 0.5rem;
+}
 
-  .collapse.show {
-    max-height: 99em;
-    transition: max-height .5s ease-in-out;
-  }
-  
-  .block {
-    margin-top: 10px;
-    padding: 0;
-  }
+.statText {
+  user-select: none;
+}
 
-  .block__content {
-    border: 1px solid;
-    padding: 1.5em;
-    height: 100%;
-  }
+.tableHeader {
+  grid-row: 1 / span 2;
+}
+
+.statsImage {
+  width: 80%;
+}

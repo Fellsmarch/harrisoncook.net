@@ -1,54 +1,79 @@
-<div id="statsDiv">
-    <!-- <button class="btn btn-primary btn__first" data-toggle="collapse" data-target=".collapse.first"
-        data-text="Collapse">
-        Toggle First
-    </button>
-    <button class="btn btn-primary btn__first" data-toggle="collapse" data-target=".collapse.second"
-        data-text="Collapse">
-        Toggle Second
-    </button>
-    <button class="btn btn-primary btn__first" data-toggle="collapse" data-target=".collapse" data-text="Collapse">
-        Toggle All
-    </button> -->
-
-    <div class="block collapse first">
-        <div class="block__content">
-            I'm the first content!
-        </div>
-    </div>
-    <div class="block collapse second">
-        <div class="block__content">
-            I'm the second content!
-        </div>
-    </div>
+<div id="newStatsDiv">
+    <div class="cell tableHeader">All Time</div>
+    <img class="cell" src="/img/referee-plain-anon-dual-pocket.svg" alt="Referee jersery" draggable="false" title="Number of games refereed">
+    <img class="cell" src="/img/whistle.svg" alt="Whistle" draggable="false" title="Number of games as the middle referee">
+    <img class="cell" src="/img/giving-yellow-card.svg" alt="Giving a yellow card" draggable="false" title="Yellow cards per game">
+    <img class="cell" src="/img/giving-red-card.svg" alt="Giving a red card" draggable="false" title="Red cards per game">
+    <div class="cell statText">9.45</div>
+    <div class="cell statText">9.45</div>
+    <div class="cell statText">9.45</div>
+    <div class="cell statText">9.45</div>
 </div>
+<!-- <div id="infoRow" class="row">
+    <div class="column info container">Per game refereed</div>
+    <div class="column infoSeperator container"></div>
+    <div class="column info container">Per middle refereed</div>
+</div> -->
 <script type="text/javascript">
 
-    function createStats(json) {
-        let finalHtml = `${createButtons(json)}${createSectionContents(json)}`
+    // function createStats(json) {
+    //     let finalHtml = `${createCollapsableHtml(json)}`;
 
-        document.getElementById("statsDiv").innerHTML = finalHtml
-    }
+    //     document.getElementById("statsDiv").innerHTML = finalHtml;
+    // }
 
-    function createSectionContents(json) {
-        let html = ""
-        let count = 0
+    function createCollapsableHtml(json) {
+        let html = "";
+        let count = 0;
         json.forEach(element => {
-            html += `<div class="block collapse block${count++}"><div class="block__content">${JSON.stringify(element)}</div></div>`
-        })
-        return html
-    }
-
-    function createButtons(json) {
-        let html = ""
-        let count = 0
-        json.forEach(element => {
-            html += createButton(element["Time Period"], count++, false)
+            html += createButton(element["Time Period"], count, false);
+            html += `<div class="block collapse block${count}"><div class="block__content">${createBlockContent(element)}</div></div>`;
+            count++;
         });
-
-        // html += createButton("", "", true)
-        return html
+        return html;
     }
+
+    function createBlockContent(jsonElement) {
+        let html = "";
+        //     <div>
+        //         <div>
+        //             <img src="/img/yellow-card.svg" alt="Yellow cards per game" title="Yellow cards per game" width="100" height="100"/>
+        //         </div>
+        //         <div>
+        //             ${jsonElement["Yellow Cards/Game"]}
+        //         </div>
+        //     </div>
+        // `;
+
+        for (var key in jsonElement) {
+            value = jsonElement[key]
+            
+            html += `<div><div><img src="/img/yellow-card.svg" alt="${key}" title="${key}" width="100" height="100"/></div><div>${value}</div></div>`;
+        };
+        console.log(html)
+        return html;
+        // return JSON.stringify(jsonElement);
+    }
+
+    // function createSectionContents(json) {
+    //     let html = ""
+    //     let count = 0
+    //     json.forEach(element => {
+    //         html += `<div class="block collapse block${count++}"><div class="block__content">${JSON.stringify(element)}</div></div>`
+    //     })
+    //     return html
+    // }
+
+    // function createButtons(json) {
+    //     let html = ""
+    //     let count = 0
+    //     json.forEach(element => {
+    //         html += createButton(element["Time Period"], count++, false)
+    //     });
+
+    //     // html += createButton("", "", true)
+    //     return html
+    // }
 
     function createButton(timePeriod, count, final) {
         if (!final) {
@@ -75,8 +100,8 @@
         loadJSON(function (response) {
             // Parse JSON string into object
             const json = JSON.parse(response);
-            createStats(json)
-            collapseFunctionality()
+            createStats(json);
+            collapseFunctionality();
         });
     }
 
