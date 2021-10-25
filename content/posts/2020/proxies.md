@@ -11,6 +11,7 @@ weight: 10
 series:
 - self-learning
 draft: false
+toc: true
 tags:
   - Proxy
   - Proxies
@@ -99,13 +100,13 @@ Load balancer reverse proxy example
                                                       |
                                                       |           +----------+
                                                       |           |          |
-                                                      +---------> | Server 2 |
+                                                      +---------> | Server 3 |
                                                                   |          |
                                                                   +----------+
 ```
 
 ### Forward Proxy
-A forward proxy is the counterpart to the reverse proxy, it sits 'in front' of the client instead of the server. In this case, the client's connection goes to the forward proxy, then the internet and finally the server. Forward proxies are what most people mean when they say 'proxy'. One of the common uses of a forward proxy is to pass requests from a private network to the internet through a firewall. They can also be used to filter or monitor outgoing traffic, for example, checking that the traffic is safe and allowing/blocking that traffic appropriately.
+A forward proxy is the counterpart to the reverse proxy, it sits 'in front' of the client instead of the server. In this case, the client's connection goes to the forward proxy, then the internet and finally the server. Forward proxies are what most laypeople mean when they say 'proxy'. One of the common uses of a forward proxy is to pass requests from a private network to the internet through a firewall. They can also be used to filter or monitor outgoing traffic, for example, checking that the traffic is safe and allowing/blocking that traffic appropriately.
 
 ```
 A forward proxy sits 'in front of' the client
@@ -125,8 +126,3 @@ A forward proxy sits 'in front of' the client
 - [The Concise Guide to Proxies (2008)](https://devcentral.f5.com/s/articles/the-concise-guide-to-proxies)
 - [Proxies — An in-depth intro](https://medium.com/consonance/proxies-an-in-depth-intro-4bb569326a34)
 - [What is a Proxy (YouTube)](https://www.youtube.com/watch?v=jGQTS1CxZTE)
-
----
-
-### Why did I write this?
-I am endeavouring to do a write-up on topics I am trying to learn more about. This helps cement my knowledge of the subject as it has been shown that teaching something can help you learn it [[1]](https://www.sciencedirect.com/science/article/abs/pii/S0361476X13000209)[[2]](https://onlinelibrary.wiley.com/doi/abs/10.1002/acp.3410?campaign=wolearlyview). I also hope these write-ups might be able to help others who are also struggling with the topic.
