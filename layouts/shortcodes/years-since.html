@@ -1,6 +1,6 @@
 <span id="years-since">        
     <script type="text/javascript">
-        let date = new Date({{ .Get "year" }}, {{ .Get "month" }}, {{ .Get "day" }});
+        let date = new Date({{ .Get "year" }}, {{ .Get "month" }} - 1, {{ .Get "day" }});
         let differenceInMiliseconds = Date.now() - date;
         let newDate = new Date(differenceInMiliseconds);
         let yearsSince = Math.abs(newDate.getUTCFullYear() - 1970);
