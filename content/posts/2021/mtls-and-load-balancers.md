@@ -20,7 +20,7 @@ tags:
   - Client Certificate Authentication
   - Cryptography
 ---
-This blog on Mutual TLS (a.k.a. Client Certificate Authentication) was originally written for some work I was doing at the time. It discusses Mutual TLS and the issues that are encountered when trying to use them with load balancers. It is written from the perspective of using Mutual TLS for our usecase (ensuring that a server only allows requests from known/approved clients).
+This blog on Mutual TLS (a.k.a. Client Certificate Authentication) was originally written for some work I was doing at the time. It discusses Mutual TLS and the issues that are encountered when trying to use it with load balancers. It is written from the perspective of using Mutual TLS for our usecase (ensuring that a server only allows requests from known/approved clients).
 
 In this discussion, diagrams will reference TLSv1.2 only, although many sources will reference both TLSv1.2 and TLSv1.3.
 
