@@ -101,7 +101,7 @@ Note: You could allow certificates signed by any certificate authority, not just
 Since the TLS handshake occurs below/before where HTTP(S) does, headers cannot be used as a part of mTLS. This means that, without a workaround, mTLS cannot be optional or done on a case-by-case basis, it must either be required or not required for a domain, there is no middle ground.
 
 #### Load Balancers
-An issue also arises when trying to use load balancers (or other proxies). Since they often terminate incoming request connections and create new ones to applications ([huh?]({{< ref "\posts\2020\proxies.md" >}})), the application server could not check if a client certificate is an 'approved' certificate. 
+An issue also arises when trying to use load balancers (or other proxies). Since they often terminate incoming request connections and create new ones to applications ([huh?](https://www.harrisoncook.net/posts/2020/proxies/)), the application server could not check if a client certificate is an 'approved' certificate. 
 
 This gives two options when using load balancers:
 - Make the load balancer handle all the authentication itself
@@ -139,7 +139,7 @@ It appears that the server was checking these two things, independent of one ano
 What this means is that a client can provide any certificate they want (as long as they have the corresponding private key) and an 'approved' certificate as a header (which is treated as public information), and the server will allow their requests.
 
 ### My Conclusions
-My initial thought was that the server must be have a (assumedly Azure) load balancer sitting infront of it (and this might've been the case, I had no way to know), but a couple of things made me think that's not true:
+My initial thought was that the server must have a (assumedly Azure) load balancer sitting infront of it (and this might've been the case, I had no way to know), but a couple of things made me think that's not true:
 - I would assume a good load balancer would strip these headers and re-add them itself to prevent this exact situation
 - In all my testing I never had a TLS handshake failure, but always an HTTP response code, this indicated that whatever the requests are hitting do not have 'proper' mTLS enabled (I am unsure if this would be normal under normal load balancer-mTLS functionality)
 - I found no evidence of CCA during TLS handshakes (using Wireshark)
